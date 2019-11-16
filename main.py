@@ -2,13 +2,14 @@ import sys
 '''
 Section 1: Collect customer input
 '''
+RATES = {
+    "B": 40.00,
+    "D": 60.00,
+    "W": 190.00,
+}
 
 ##Collect Customer Data - Part 1
-RATES = {
-    "budget": 40.00,
-    "daily": 60.00,
-    "weekly": 190,
-}
+
 #1)	Request Rental code:
 #Prompt --> "(B)udget, (D)aily, or (W)eekly rental?"
 #rentalCode = ?
@@ -29,21 +30,22 @@ while valid_rental_code_received == False:
 #rentalPeriod = ?
 
 if rentalCode == "W":
-  rentalPeriod = input("Number of Weeks Rented:\n")
+  rentalPeriod = int(input("Number of Weeks Rented:\n"))
 else:
-  rentalPeriod = input("Number of Days Rented:\n")
-  
-print(rentalCode)
-print(rentalPeriod)
-
+  rentalPeriod = int(input("Number of Days Rented:\n"))
 
 #CUSTOMER DATA CHECK 1
 #ADD CODE HERE TO PRINT:
 #rentalCode
 #rentalPeriod
 
+print(rentalCode)
+print(rentalPeriod)
 
 #Calculation Part 1
 
 ##Set the base charge for the rental type as the variable baseCharge. 
 #The base charge is the rental period * the appropriate rate:
+
+baseCharge = format(rentalPeriod * RATES[rentalCode],".2f")
+print(baseCharge)
