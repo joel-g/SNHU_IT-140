@@ -50,7 +50,7 @@ else: #no need to check for "W" because all cases that are not B or D would be W
 if rentalCode == "W":   
     baseCharge = (rentalPeriod/7) * RATES[rentalCode]
 else: 
-    baseCharge = 7 * RATES[rentalCode]
+    baseCharge = rentalPeriod * RATES[rentalCode]
 
 # output summary to user (converting all INTs and FLOATs back to STRINGs)
 print("Rental Summary")
