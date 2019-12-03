@@ -2,8 +2,8 @@ import sys
 
 # Joel Guerra
 # IT-140
-# Project 1
-# 11-15-2019
+# Project 1 Final
+# 11-30-2019
 
 
 # const rates dictionary will be used to calculate base charge
